@@ -18,5 +18,4 @@ For more details and clear documentation, refer
 ```
 streamlit run app.py --server.headless=true
 ```
-
-**Note:** Running in remote desktop is giving both Network and External URLs but returning "connection request"
+Run the above command to get the external URL in which we can enter the string and get the output number of "CG"s. Didn't host in any server but it is running/working as expected.
