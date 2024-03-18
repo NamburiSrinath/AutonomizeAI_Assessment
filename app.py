@@ -8,6 +8,12 @@ LSTM_INPUT_SIZE = 6
 LSTM_HIDDEN = 256
 LSTM_LAYER = 2
 
+def count_CG(string):
+    count = 0
+    for i in range(len(string) - 1):
+        if string[i:i+2] == "CG":
+            count += 1
+    return count
 # Model
 class CpGPredictor(torch.nn.Module):
     ''' Simple model that uses a LSTM to count the number of CpGs in a sequence '''
@@ -81,4 +87,6 @@ sequence_input = st.text_input('Enter DNA sequence (e.g., "NACGT")')
 # Prediction
 if sequence_input:
     prediction = predict_cpg(sequence_input)
+    st.write(f'Length of sequence before padding: {len(sequence_input)}')
     st.write(f'Predicted CpG sites: {prediction}')
+    st.write(f'Actual number of CpG sites: {count_CG(sequence_input)}')
