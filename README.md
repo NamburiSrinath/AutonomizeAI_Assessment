@@ -3,8 +3,21 @@
 Predict the number of "CG" in the given string
 
 **Idea** 
-- Formulate it as a regression problem, regress the total number of "CG" in the string
-- *Result:* The R2 is around 0.99. The accuracy (rounded the predictions to nearest integer is also 0.99.
+- Formulate it as a regression problem, regress the total number of "CG" in the string using LSTM with MSE loss.
+- *Results:* The model is able to perform very reasonable for a wide range of inputs, below are the reported tables.
+  
+| Model | R2 (higher better) | MSE (lower better) | MAE (lower better) |
+|-------|--------------------|--------------------|--------------------|
+| Part 1 (no padding) |     0.99729        |     0.023828       |     0.16258        | 
+| Part 2 (padding) |     0.99734        |     0.018365       |     0.12720        |
+
+By rounding off the predicted values, we can also compute the metrics such as accuracy, precision and recall (note that these metrics are for classification and have reported to just understand the predictions)
+
+| Model | Accuracy (higher better) | Precision (higher better) | Recall (higher better) |
+|-------|--------------------|--------------------|--------------------|
+| Part 1 (no padding) |     0.99609        |     0.90555       |     0.9166        | 
+| Part 2 (padding) |     0.99609        |     0.83159       |     0.83230        |
+
 - *Discussion:* The model predicts reasonably well on a lot of scenarios (when there are less CGs and more CGs in a normal sequence).
 ![2](https://github.com/NamburiSrinath/AutonomizeAI_Assessment/assets/40389487/b08ed80d-0078-405f-b925-c073e0a34e75)
 
