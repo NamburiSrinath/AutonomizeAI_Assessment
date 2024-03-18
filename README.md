@@ -1,4 +1,4 @@
-# CpG Detector (work in progress)
+# CpG Detector
 
 Predict the number of "CG" in the given string
 
