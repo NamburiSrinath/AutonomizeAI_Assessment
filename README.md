@@ -4,12 +4,11 @@ Predict the number of "CG" in the given string
 
 **Idea 1 (Done)** 
 - Formulate it as a regression problem, regress the total number of "CG" in the string
-- *Initial Result:* The R2 is low, accuracy (rounded the predictions) turned out to be ~20% and the predictions are mostly 5 (which is close to mean of the distribution. So, the model has induced to learn the mean of the distribution
+- *Result:* The R2 is around 0.99. The accuracy (rounded the predictions to nearest integer is also 0.99.
+- *Discussion:* The model predicts reasonably well (attached screenshots in
 
-**Potential Idea to experiment with**
-- Formulate it as classification problem where the string will be divided into a window of 2, and each window, predict whether it is "CG" or not. Add the final predictions.
-- Standard Binary Cross Entropy problem! Need to preprocess the dataset and dataloaders to fit this problem!
-- Metrics will be accuracy, precision, recall and F1 score (standard binary classification problem)
+![1](https://github.com/NamburiSrinath/AutonomizeAI_Assessment/assets/40389487/837862e8-7763-4f78-9af9-fb34c2040ee8)
+
 
 For more details and clear documentation, refer 
 
@@ -19,4 +18,9 @@ For more details and clear documentation, refer
 ```
 streamlit run app.py --server.headless=true
 ```
-Run the above command to get the external URL in which we can enter the string and get the output number of "CG"s. Didn't host in any server but it is running/working as expected.
+Run the above command to get the external URL in which we can enter the string and get the output number of "CG"s.
+
+**Potential Idea to experiment with (refer document for more brainstorming phase)**
+- Formulate it as classification problem where the string will be divided into a window of 2, and each window, predict whether it is "CG" or not. Add the final predictions.
+- Standard Binary Cross Entropy problem! Need to preprocess the dataset and dataloaders to fit this problem!
+- Metrics will be accuracy, precision, recall and F1 score (standard binary classification problem)
