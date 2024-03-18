@@ -3,8 +3,8 @@
 Predict the number of "CG" in the given string
 
 **Idea** 
-- Formulate it as a regression problem, regress the total number of "CG" in the string
-- *Result:* The R2 is around 0.99. The accuracy (rounded the predictions to nearest integer is also 0.99.
+- Formulate it as a regression problem, regress the total number of "CG" in the string using LSTM with MSE loss.
+- *Results:* The model is able to perform very reasonable for a wide range of inputs, below are the reported tables.
   
 | Model | R2 (higher better) | MSE (lower better) | MAE (lower better) |
 |-------|--------------------|--------------------|--------------------|
