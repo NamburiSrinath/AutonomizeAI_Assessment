@@ -12,6 +12,7 @@ But for sequences where there are only CG's (such as below screenshot), the mode
 ![1](https://github.com/NamburiSrinath/AutonomizeAI_Assessment/assets/40389487/837862e8-7763-4f78-9af9-fb34c2040ee8)
 
 For more details and clear documentation, refer 
+
 **Report** - https://docs.google.com/document/d/1uF8eOnVi4QrO3cDNYDd1OFeRmaW3PqNt8gjZWluS1IE/edit?usp=sharing
 
 ### For streamlit app
@@ -19,6 +20,7 @@ For more details and clear documentation, refer
 streamlit run app.py --server.headless=true
 ```
 Run the above command to get the external URL in which we can enter the string and get the output number of "CG"s.
+
 **Potential Idea to experiment with (refer document for more information)**
 - Formulate it as classification problem where the string will be divided into a window of 2, and each window, predict whether it is "CG" or not. Add the final predictions.
 - Standard Binary Cross Entropy problem! Need to preprocess the dataset and dataloaders to fit this problem!
