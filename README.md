@@ -5,6 +5,7 @@ Predict the number of "CG" in the given string
 **Idea** 
 - Formulate it as a regression problem, regress the total number of "CG" in the string
 - *Result:* The R2 is around 0.99. The accuracy (rounded the predictions to nearest integer is also 0.99.
+  
 | Model | R2 (higher better) | MSE (lower better) | MAE (lower better) |
 |-------|--------------------|--------------------|--------------------|
 | Part 1 (no padding) |     0.99729        |     0.023828       |     0.16258        | 
