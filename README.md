@@ -11,7 +11,7 @@ Predict the number of "CG" in the given string
 | Part 1 (no padding) |     0.99729        |     0.023828       |     0.16258        | 
 | Part 2 (padding) |     0.99734        |     0.018365       |     0.12720        |
 
-By rounding off the predicted values, we can also compute the metrics such as accuracy, precision and recall (note that these metrics are for classification and have reported to just understand the predictions)
+By rounding off the predicted values, we can also compute the metrics such as accuracy, precision and recall (*note that these metrics are for classification and I have reported to just understand the nature of predictions*) If we want to output the number of CG's, we might have to round off to nearest integer!
 
 | Model | Accuracy (higher better) | Precision (higher better) | Recall (higher better) |
 |-------|--------------------|--------------------|--------------------|
