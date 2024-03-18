@@ -5,6 +5,14 @@ Predict the number of "CG" in the given string
 **Idea** 
 - Formulate it as a regression problem, regress the total number of "CG" in the string
 - *Result:* The R2 is around 0.99. The accuracy (rounded the predictions to nearest integer is also 0.99.
+| Model | R2 (higher better) | MSE (lower better) | MAE (lower better) |
+|-------|--------------------|--------------------|--------------------|
+| Part 1 (no padding) |     0.99729        |     0.023828       |     0.16258        | 
+| Part 2 (padding) |     0.99729        |     0.023828       |     0.16258        |
+|-------|--------------------|--------------------|--------------------|
+
+
+| Accuracy (higher better) | Precision (higher better) | Recall (higher better)
 - *Discussion:* The model predicts reasonably well on a lot of scenarios (when there are less CGs and more CGs in a normal sequence).
 ![2](https://github.com/NamburiSrinath/AutonomizeAI_Assessment/assets/40389487/b08ed80d-0078-405f-b925-c073e0a34e75)
 
