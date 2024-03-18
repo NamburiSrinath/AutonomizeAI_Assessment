@@ -21,6 +21,8 @@ streamlit run app.py --server.headless=true
 ```
 Run the above command to get the external URL in which we can enter the string and get the output number of "CG"s.
 
+**App live deployment link:** https://autonomizeaiassessment-dwes58uhjbpfn3ui5gsfyz.streamlit.app/
+
 **Potential Idea to experiment with (refer document for more information)**
 - Formulate it as classification problem where the string will be divided into a window of 2, and each window, predict whether it is "CG" or not. Add the final predictions.
 - Standard Binary Cross Entropy problem! Need to preprocess the dataset and dataloaders to fit this problem!
