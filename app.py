@@ -84,8 +84,15 @@ st.title('CpG Site Predictor')
 # Input box
 sequence_input = st.text_input('Enter DNA sequence (e.g., "NACGT")')
 
+def verify_DNA_sequence(string):
+    valid_chars = set('NAGCT ')
+    return all(char in valid_chars for char in string) and string != ""
+
+if not verify_DNA_sequence(sequence_input):
+    st.write("Please enter only N, A, G, T, C characters")
+
 # Prediction
-if sequence_input:
+if verify_DNA_sequence(sequence_input):
     prediction = predict_cpg(sequence_input)
     st.write(f'Length of sequence before padding: {len(sequence_input)}')
     st.write(f'Predicted CpG sites: {prediction}')
