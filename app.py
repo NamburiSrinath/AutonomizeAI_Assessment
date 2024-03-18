@@ -83,6 +83,7 @@ st.title('CpG Site Predictor')
 
 # Input box
 sequence_input = st.text_input('Enter DNA sequence (e.g., "NACGT")')
+sequence_input = sequence_input.upper()
 
 def verify_DNA_sequence(string):
     valid_chars = set('NAGCT ')
